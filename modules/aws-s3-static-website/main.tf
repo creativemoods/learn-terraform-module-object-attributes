@@ -49,6 +49,10 @@ resource "aws_s3_bucket_acl" "web" {
 }
 
 resource "aws_s3_bucket_policy" "web" {
+  depends_on = [
+    aws_s3_bucket_acl.web
+  ]
+
   bucket = aws_s3_bucket.web.id
 
   policy = jsonencode({
