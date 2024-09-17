@@ -4,7 +4,9 @@
 # Terraform configuration
 
 provider "aws" {
-  region = "us-west-2"
+  region = "eu-west-2" # London
+  access_key = "AK..."
+  secret_key = "..."
 
   default_tags {
     tags = {
